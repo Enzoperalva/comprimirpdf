@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, #1e293b, #0f172a 60%);
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+.card {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.upload-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+} 
+#pdfInput {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px dashed #475569;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#pdfInput:hover {
+  border-color: #60a5fa;
+}
+
+#fileList {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#fileList li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#mergeBtn {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  transition: 0.3s;
+}
+
+#mergeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+#mergeBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#status {
+  margin-top: 18px;
+  text-align: center;
+  color: #93c5fd;
+  min-height: 20px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+
+#pdfInput {
+  display: none;
+}
+
+.custom-upload {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px dashed #60a5fa;
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.custom-upload:hover {
+  background: rgba(96, 165, 250, 0.08);
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
